@@ -1,26 +1,26 @@
 <template>
     <div class="tweet-list">
-        <compose-tweet @added="added">
-        </compose-tweet>
+        <tweet-compose @added="added">
+        </tweet-compose>
 
-        <tweet v-for="tweet in sorted_tweets"
+        <tweet-view v-for="tweet in sorted_tweets"
             :key="tweet.id"
             :tweet="tweet"
-        ></tweet>
+        ></tweet-view>
     </div>
 </template>
 
 <script>
 import ApiClient from '../api/api-client.js';
-import Tweet from '../tweets/tweet.vue';
-import ComposeTweet from '../tweets/compose-tweet.vue';
+import TweetView from '../tweets/tweet-view.vue';
+import TweetCompose from '../tweets/tweet-compose.vue';
 
 export default {
     mixins: [ ApiClient ],
 
     components: {
-        ComposeTweet,
-        Tweet,
+        TweetCompose,
+        TweetView,
     },
 
     computed: {
