@@ -9,15 +9,11 @@
 </template>
 
 <script>
-import Api from '../mixins/api.js';
+import ApiClient from '../api/api-client.js';
 
 export default {
-    mixins: [
-        Api,
-    ],
+    mixins: [ ApiClient ],
 
-    props: [
-        'tweet',
-    ],
+    props: [ 'tweet' ],
 }
 </script>

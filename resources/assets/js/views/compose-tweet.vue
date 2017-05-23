@@ -21,13 +21,11 @@
 </template>
 
 <script>
-import Api from '../mixins/api.js';
+import ApiClient from '../api/api-client.js';
 import InputText from '../mixins/form/input-text.vue';
 
 export default {
-    mixins: [
-        Api,
-    ],
+    mixins: [ ApiClient ],
 
     components: {
         InputText,
