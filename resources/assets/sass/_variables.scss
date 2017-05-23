@@ -1,0 +1,41 @@
+/* Body */
+$body-bg: #f5f8fa;
+
+/* Borders */
+$border-color: darken($body-bg, 15%);
+$list-group-border: $border-color;
+$navbar-default-border: $border-color;
+$panel-default-border: $border-color;
+$panel-inner-border: $border-color;
+
+/* Brands */
+$brand-primary: #445b72;
+$brand-info: #31b0d5;
+$brand-success: #449d44;
+$brand-warning: #ec971f;
+$brand-danger: #c9302c;
+
+/* Typography */
+$font-family-sans-serif: "Muli", sans-serif;
+$font-size-base: 15px;
+$headings-font-weight: 300;
+$line-height-base: 1.6;
+$text-color: #444444;
+
+/* Navbar */
+$navbar-default-bg: #fff;
+
+/* Buttons */
+$btn-default-color: $text-color;
+
+/* Inputs */
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+/* Panels */
+$panel-default-heading-bg: #fff;
+
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;

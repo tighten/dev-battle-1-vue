@@ -1,0 +1,17 @@
+.navbar-header {
+    display: flex;
+    float: none;
+    justify-content: center;
+}
+
+.navbar-brand {
+    align-items: center;
+    display: flex;
+    line-height: 1.5;
+
+    .logo {
+        height: 35px;
+        margin-right: 10px;
+        width: 35px;
+    }
+}

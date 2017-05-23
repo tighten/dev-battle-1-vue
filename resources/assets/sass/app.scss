@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i');
+
+@import '~ionicons/dist/css/ionicons.min.css';
+@import 'variables';
+@import 'bootstrap';
+@import 'nav';
+
+body {
+    font-weight: 300;
+}
+
+.btn {
+    outline: 0 !important;
+
+    .icon {
+        margin-right: 10px;
+    }
+}
+
