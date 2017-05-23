@@ -1,0 +1,68 @@
+/**
+ * Colors
+ */
+$tweet-gray-light: #e3e3e3;
+$tweet-gray-medium: #dddddd;
+$tweet-gray-dark: #6e6e6e;
+$tweet-background-light: #fbfaf9;
+$tweet-blue: #6b9ec7;
+
+$shadow: 1px 2px 8px -5px $tweet-gray-dark;
+$transition: .3s all;
+
+/**
+ * Tweet list
+ */
+.tweet-list {
+    background: white;
+    border: 1px solid $tweet-gray-light;
+    box-shadow: $shadow;
+    padding: 0;
+}
+
+/**
+ * Search box
+ */
+.tweet-search {
+    position: relative;
+
+    input {
+        border-radius: 20px;
+        border: 1px solid white;
+        box-shadow: $shadow;
+        color: $tweet-blue;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        outline: 0 !important;
+        padding: 5px 15px;
+        transition: $transition;
+        width: 100%;
+
+        &:focus {
+            border-color: $tweet-blue;
+
+            + .icon {
+                color: $tweet-blue;
+            }
+        }
+    }
+
+    .icon {
+        color: lighten($tweet-blue, 15%);
+        font-size: 26px;
+        position: absolute;
+        right: 12px;
+        top: 0;
+    }
+
+    &__clear {
+        cursor: pointer;
+
+        &.icon {
+            font-size: 36px;
+            right: 14px;
+            top: -6px;
+        }
+    }
+}

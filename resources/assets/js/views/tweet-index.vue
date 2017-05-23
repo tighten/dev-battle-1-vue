@@ -1,49 +1,54 @@
 <template>
-    <div class="tweet-list">
-        <tweet-compose @added="added">
-        </tweet-compose>
+    <div class="app">
+        <tweet-compose></tweet-compose>
 
-        <tweet-view v-for="tweet in sorted_tweets"
-            :key="tweet.id"
-            :tweet="tweet"
-        ></tweet-view>
+        <tweet-search @searched="filterTweets"></tweet-search>
+
+        <div class="tweet-list">
+            <tweet-view
+                v-for="tweet in sorted_tweets"
+                :key="tweet.id"
+                :tweet="tweet"
+            ></tweet-view>
+        </div>
     </div>
 </template>
 
 <script>
 import ApiClient from '../api/api-client.js';
-import TweetView from '../tweets/tweet-view.vue';
 import TweetCompose from '../tweets/tweet-compose.vue';
+import TweetSearch from '../tweets/tweet-search.vue';
+import TweetView from '../tweets/tweet-view.vue';
 
 export default {
     mixins: [ ApiClient ],
 
     components: {
         TweetCompose,
+        TweetSearch,
         TweetView,
-    },
-
-    computed: {
-        sorted_tweets() {
-            return _.orderBy(this.tweets, ['created_at'], ['desc']);
-        },
     },
 
     data() {
         return {
-            tweets: [],
+            filtered_tweets: [],
         }
     },
 
+    computed: {
+        sorted_tweets() { return _.orderBy(this.filtered_tweets, 'created_at', 'desc') },
+        tweets() { return store.tweets },
+    },
+
     methods: {
-        added(response) {
-            this.tweets.push(response);
+        filterTweets(filtered_tweets) {
+            this.filtered_tweets = filtered_tweets;
         },
     },
 
     created() {
-        this.get('tweets').then((response) => {
-            this.tweets = response;
+        store.load('tweets', 'tweets').then((response) => {
+            this.filtered_tweets = this.tweets;
         });
     },
 }

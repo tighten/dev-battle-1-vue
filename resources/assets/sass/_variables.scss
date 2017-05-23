@@ -1,5 +1,5 @@
 /* Body */
-$body-bg: #f5f8fa;
+$body-bg: #f4f3f1;
 
 /* Borders */
 $border-color: darken($body-bg, 15%);
@@ -16,10 +16,11 @@ $brand-warning: #ec971f;
 $brand-danger: #c9302c;
 
 /* Typography */
-$font-family-sans-serif: "Muli", sans-serif;
+$font-family-sans-serif: "Source Sans Pro", sans-serif;
 $font-size-base: 15px;
 $headings-font-weight: 300;
-$line-height-base: 1.6;
+$line-height-base: 1.5;
+$headings-line-height: 1.4;
 $text-color: #444444;
 
 /* Navbar */
