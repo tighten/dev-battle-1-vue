@@ -5,7 +5,9 @@
 <script>
 const avatars_local = [
     'drumpf',
+    'god',
     'keith damiani',
+    'mephistopheles',
     'samantha geitz',
 ];
 
