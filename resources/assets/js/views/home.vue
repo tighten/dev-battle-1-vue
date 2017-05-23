@@ -12,8 +12,8 @@
 
 <script>
 import ApiClient from '../api/api-client.js';
-import Tweet from './tweet.vue';
-import ComposeTweet from './compose-tweet.vue';
+import Tweet from '../tweets/tweet.vue';
+import ComposeTweet from '../tweets/compose-tweet.vue';
 
 export default {
     mixins: [ ApiClient ],
