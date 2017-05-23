@@ -21,6 +21,35 @@ $transition: .3s all;
 }
 
 /**
+ * Individual tweet
+ */
+.tweet {
+    border-bottom: 1px solid $tweet-gray-light;
+    padding: 20px 25px 10px 20px;
+    display: flex;
+
+    &:hover {
+        background: $tweet-background-light;
+    }
+}
+
+.tweet__content {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.tweet__details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet__text {
+    font-size: 22px;
+    margin: 0 0 5px;
+}
+
+/**
  * Search box
  */
 .tweet-search {
