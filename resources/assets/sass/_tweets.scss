@@ -33,6 +33,14 @@ $transition: .3s all;
     }
 }
 
+.tweet__avatar {
+    border-radius: 4px;
+    flex: 0;
+    height: 56px;
+    margin-right: 15px;
+    width: 56px;
+}
+
 .tweet__content {
     display: flex;
     flex: 1 1 auto;

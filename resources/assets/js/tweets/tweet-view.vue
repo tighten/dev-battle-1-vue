@@ -1,5 +1,7 @@
 <template>
     <div class="tweet">
+        <tweet-avatar :name="tweet.author"></tweet-avatar>
+
         <div class="tweet__content">
             <div class="tweet__details">
                 <p><strong>{{ tweet.author }}</strong></p>
@@ -14,8 +16,13 @@
 
 <script>
 import moment from 'moment';
+import TweetAvatar from './tweet-avatar.vue';
 
 export default {
+    components: {
+        TweetAvatar,
+    },
+
     props: [ 'tweet' ],
 
     filters: {
