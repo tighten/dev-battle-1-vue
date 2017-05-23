@@ -10,6 +10,12 @@
             </div>
 
             <h3 class="tweet__text">{{ tweet.text }}</h3>
+
+            <div class="tweet-buttons">
+                <tweet-like :tweet="tweet"></tweet-like>
+
+                <tweet-delete :tweet="tweet"></tweet-delete>
+            </div>
         </div>
     </div>
 </template>
@@ -17,10 +23,14 @@
 <script>
 import moment from 'moment';
 import TweetAvatar from './tweet-avatar.vue';
+import TweetDelete from './tweet-delete.vue';
+import TweetLike from './tweet-like.vue';
 
 export default {
     components: {
         TweetAvatar,
+        TweetDelete,
+        TweetLike,
     },
 
     props: [ 'tweet' ],

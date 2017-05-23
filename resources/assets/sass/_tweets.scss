@@ -6,6 +6,7 @@ $tweet-gray-medium: #dddddd;
 $tweet-gray-dark: #6e6e6e;
 $tweet-background-light: #fbfaf9;
 $tweet-blue: #6b9ec7;
+$red-bright: #ff0000;
 
 $shadow: 1px 2px 8px -5px $tweet-gray-dark;
 $transition: .3s all;
@@ -55,6 +56,43 @@ $transition: .3s all;
 .tweet__text {
     font-size: 22px;
     margin: 0 0 5px;
+}
+
+/**
+ * Tweet buttons
+ */
+.tweet-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .icon {
+        font-size: 18px;
+        color: darken($tweet-gray-medium, 5%);
+        cursor: pointer;
+        transition: $transition;
+
+        &:hover {
+            color: $tweet-blue;
+        }
+    }
+}
+
+.tweet-buttons__likes {
+    display: flex;
+    align-items: center;
+
+    p {
+        color: $tweet-gray-dark;
+        margin: 0 10px;
+    }
+
+    &--has-likes {
+        &.icon, &.icon:hover {
+            color: $red-bright;
+            cursor: default;
+        }
+    }
 }
 
 /**
