@@ -9,7 +9,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        JavaScript::put(['auth_token' => env('AUTH_TOKEN')]);
+        JavaScript::put([
+            'auth_token' => env('AUTH_TOKEN'),
+            'username' => env('USERNAME'),
+        ]);
 
         return view('router');
     }
