@@ -26,3 +26,24 @@ body {
         margin-right: 10px;
     }
 }
+
+.btn-blue {
+    background: $tweet-blue;
+    color: white;
+    transition: .2s all;
+
+    &:hover, &:focus {
+        background: darken($tweet-blue, 8%);
+        color: white;
+    }
+
+    &--active {
+        background: $tweet-gray-medium;
+        color: $tweet-gray-dark;
+
+        &:hover, &:focus {
+            background: darken($tweet-gray-medium, 8%);
+            color: $tweet-gray-dark;
+        }
+    }
+}

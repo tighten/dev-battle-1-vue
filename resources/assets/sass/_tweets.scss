@@ -7,6 +7,7 @@ $tweet-gray-dark: #6e6e6e;
 $tweet-background-light: #fbfaf9;
 $tweet-blue: #6b9ec7;
 $red-bright: #ff0000;
+$red-dark: #b30f0f;
 
 $shadow: 1px 2px 8px -5px $tweet-gray-dark;
 $transition: .3s all;
@@ -139,5 +140,108 @@ $transition: .3s all;
             right: 14px;
             top: -6px;
         }
+    }
+}
+
+/**
+ * Compose panel
+ */
+.compose {
+    background: $tweet-background-light;
+    margin-bottom: 20px;
+}
+
+.compose__body {
+    display: flex;
+
+    img {
+        margin: 20px 15px 0 20px;
+    }
+}
+
+.compose__container {
+    border-bottom: 1px solid $tweet-gray-light;
+    border-left: 1px solid $tweet-gray-light;
+    border-right: 1px solid $tweet-gray-light;
+    box-shadow: $shadow;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.compose__counter {
+    font-weight: 400;
+    color: $tweet-gray-dark;
+    margin-right: 10px;
+
+    &--warning {
+        color: $red-dark;
+    }
+
+    &--danger {
+        font-weight: 600;
+        color: $red-bright;
+    }
+}
+
+.compose__editor {
+    -webkit-text-fill-color: transparent;
+    border-radius: 4px;
+    border: 1px solid $tweet-gray-medium;
+    color: black;
+    flex: 1 1 auto;
+    font-size: 22px;
+    margin: 20px 20px 20px 0;
+    min-height: 100px;
+    outline: 0 !important;
+    padding: 5px 10px;
+    text-shadow: 0px 0px 0px transparent;
+    transition: $transition;
+    z-index: 2;
+
+    &:focus {
+        border: 1px solid $tweet-blue;
+    }
+}
+
+.compose__editor-highlighted {
+    border-radius: 4px;
+    border: 1px solid transparent;
+    font-size: 22px;
+    left: 70px;
+    margin: 20px;
+    outline: 0 !important;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    user-select: none;
+    z-index: 1;
+
+    .highlighted {
+        color: $red-bright;
+    }
+}
+
+.compose__footer {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 20px 20px;
+}
+
+.compose-slide-down {
+    &-enter-active, &-leave-active {
+        transition: all .3s ease-in-out;
+    }
+
+    &-enter, &-leave-to {
+        max-height: 0;
+        opacity: 0;
+    }
+
+    &-enter-to, &-leave {
+        max-height: 250px;
+        opacity: 1;
     }
 }
